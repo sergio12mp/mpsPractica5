@@ -28,7 +28,7 @@ public class BoundedQueue<T> {
       throw new FullQueueException() ;
     }
 
-    buffer.set(nextFreeSlot, element) ;
+    buffer.add(nextFreeSlot, element) ;
     nextFreeSlot = (nextFreeSlot + 1) % capacity ;
     numberOfItems ++ ;
   }
